@@ -1,0 +1,17 @@
+version: '0'
+services:
+  api:
+    build: .
+    ports:
+     - "5020:5020"
+  jupyter:
+    working_dir: /root
+    build: .
+    ports:
+     - "8833:8888"
+    command: jupyter notebook  --allow-root
+    volumes: 
+     - .:/code
+     - ./api:/root/api
+     - ./data:/root/data
+     - ./notebooks:/root/notebooks
