@@ -14,4 +14,6 @@ ADD ./jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py
 
 RUN chmod +x ./api/apirun
 
-CMD ["python","api/app.py"]
+#CMD ["python","api/app.py"]
+
+CMD ["sh","api/apirun"]

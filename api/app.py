@@ -5,11 +5,13 @@ from flask import request
 from models import AI_inference
 from jinja2 import FileSystemLoader,Environment
 import argparse
+import json
 
-parser = argparse.ArgumentParser()
-parser.add_argument("--test", default=False, type=bool, help="if testings, will print out more hint")
-args = parser.parse_args()
-istest = int(args.test)
+#parser = argparse.ArgumentParser()
+#parser.add_argument("--test", default=False, type=bool, help="if testings, will print out more hint")
+#args = parser.parse_args()
+#istest = int(args.test)
+istest=True
 
 loader_ = FileSystemLoader(searchpath="api/templates")
 loader = Environment(loader=loader_)
